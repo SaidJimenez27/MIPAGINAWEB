@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manantial - Agua Pura y Natural</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="container">
+        <h1>Manantial</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#empleados">Empleados</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="social-media">
+            <a href="https://www.facebook.com/manantialagua" target="_blank">Facebook</a>
+            <a href="https://wa.me/1234567890" target="_blank">WhatsApp</a>
+        </div>
+    </div>
+</header>
+<main>
+    <section id="sobre-nosotros">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+            <p>Manantial es una Microempresa dedicada a la distribución y venta de agua pura y natural. Nos enorgullece ofrecer productos de alta calidad a nuestros clientes, garantizando siempre la frescura y pureza de nuestro agua.</p>
+        </div>
+    </section>
+    <section id="productos">
+        <div class="container">
+            <h2>Nuestros Productos</h2>
+            <div class="product-grid">
+                <div class="producto" data-precio="50">
+                    <img src="img/botellon.jpg" width="100" height="100">
+                    <h3>Botellón de 20 Litros</h3>
+                    <p>Precio: Bs 20</p>
+                    <button onclick="agregarAlCarrito('Botellón de 20 Litros', 50)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-precio="2">
+                    <img src="img/sachets.png" width="100" height="100">
+                    <h3>Sachet de 500 ml</h3>
+                    <p>Precio: Bs 1.50</p>
+                    <button onclick="agregarAlCarrito('Sachet de 500 ml', 2)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-precio="10">
+                    <img src="img/botella3lit.jpg" width="100" height="100">
+                    <h3>Agua Embotellada de 3 Litros</h3>
+                    <p>Precio: Bs 6</p>
+                    <button onclick="agregarAlCarrito('Agua de 3 Litros', 10)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-precio="15">
+                    <img src="img/botella5lit.jpg" width="100" height="100">
+                    <h3>Agua Embotellada de 5 Litros</h3>
+                    <p>Precio: Bs 9</p>
+                    <button onclick="agregarAlCarrito('Agua de 5 Litros', 15)">Agregar al carrito</button>
+                </div>
+                <div class="producto" data-precio="20">
+                    <img src="img/botella7lit.png" width="100" height="100">
+                    <h3>Agua Embotellada de 7 Litros</h3>
+                    <p>Precio: Bs 12</p>
+                    <button onclick="agregarAlCarrito('Agua de 7 Litros', 20)">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="empleados">
+        <div class="container">
+            <h2>Nuestros Empleados</h2>
+            <div class="empleados-container">
+                <div class="empleado">
+                    <img src="img/empleado1.jpg" width="100" height="100">
+                    <div class="empleado-info">
+                        <h3>Edson Jimenez</h3>
+                        <p>Gerente y Distribuidor</p>
+                    </div>
+                </div>
+                <div class="empleado">
+                    <img src="img/empleado2.png" width="100" height="100">
+                    <div class="empleado-info">
+                        <h3>Javier Jimenez</h3>
+                        <p>Gerente y Distribuidor</p>
+                    </div>
+                </div>
+                <div class="empleado">
+                    <img src="img/empleado3.jpg" width="100" height="100">
+                    <div class="empleado-info">
+                        <h3>Juan Jimenez</h3>
+                        <p>Gerente y Distribuidor</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="pedido">
+        <div class="container">
+            <h2>Realizar Pedido</h2>
+            <div class="form-container">
+                <form id="miFormulario" onsubmit="return validarFormulario()">
+                    <label for="nombre">Tu nombre:</label>
+                    <input type="text" id="nombre" required>
+                    <span id="errorNombre" class="error"></span><br>
+                    <label for="email">Tu correo:</label>
+                    <input type="email" id="email" required>
+                    <span id="errorEmail" class="error"></span><br>
+                    <button type="submit">Enviar Pedido</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="carrito">
+        <div class="container">
+            <h2>Carrito de Compras</h2>
+            <div class="carrito-container">
+                <ul id="lista-carrito"></ul>
+                <p id="total">Total: Bs0</p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer id="contacto">
+    <div class="container">
+        <p>Contacto: manantial@agua.com</p>
+        <p>Teléfono: 75984265</p>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
